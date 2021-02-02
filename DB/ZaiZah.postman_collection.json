@@ -1,0 +1,778 @@
+{
+	"info": {
+		"_postman_id": "3d307e96-c56c-4ac7-ba08-979e3f44294e",
+		"name": "ZaiZah",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "http://localhost:51811/api/auth/register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n    \"FirstName\":\"Kumar\",\r\n    \"LastName\":\"Malan\",\r\n    \"Dob\":\"2020-11-03\",\r\n    \"Gender\":\"Male\",\r\n    \"Email\":\"Kumar1@gmail.com\",\r\n    \"UserName\":\"Kumar1@gmail.com\",\r\n    \"Country\":\"Sri Lanka\",\r\n    \"City\":\"Jaffna\",\r\n    \"StreetAddress\":\"Church Road, Earlalai\",\r\n    \"PostalCode\":40000,\"Password\":\"1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:51811/api/auth/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "51811",
+							"path": [
+								"api",
+								"auth",
+								"register"
+							]
+						},
+						"description": "Register User"
+					},
+					"response": [
+						{
+							"name": "http://localhost:51811/api/auth/register",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{ \r\n    \"FirstName\":\"Kumar\",\r\n    \"LastName\":\"Malan\",\r\n    \"Dob\":\"2020-11-03\",\r\n    \"Gender\":\"Male\",\r\n    \"Email\":\"Kumar1@gmail.com\",\r\n    \"UserName\":\"Kumar1@gmail.com\",\r\n    \"Country\":\"Sri Lanka\",\r\n    \"City\":\"Jaffna\",\r\n    \"StreetAddress\":\"Church Road, Earlalai\",\r\n    \"PostalCode\":40000,\"Password\":\"1234\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:51811/api/auth/register",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "51811",
+									"path": [
+										"api",
+										"auth",
+										"register"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Server",
+									"value": "Microsoft-IIS/10.0"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "ASP.NET"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 25 Nov 2020 15:50:34 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"successfully registered.\"\n}"
+						}
+					]
+				},
+				{
+					"name": "http://localhost:51811/api/auth/login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"UserName\":\"Kumar1@gmail.com\",\r\n    \"Password\":\"1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:51811/api/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "51811",
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						},
+						"description": "Login using JWT Token"
+					},
+					"response": [
+						{
+							"name": "http://localhost:51811/api/auth/login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"UserName\":\"Kumar1@gmail.com\",\r\n    \"Password\":\"1234\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:51811/api/auth/login",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "51811",
+									"path": [
+										"api",
+										"auth",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Server",
+									"value": "Microsoft-IIS/10.0"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "ASP.NET"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 25 Nov 2020 15:57:16 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"token\": \"eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNyc2Etc2hhMjU2Iiwia2lkIjoiRkIxQUJGREYwNjE2RTIwMURDRUM3ODgwRkYxNEI0REQzQ0RBQjhDQSIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiS3VtYXIxQGdtYWlsLmNvbSIsImV4cCI6MTYwNjMyMDQzNSwiaXNzIjoiWmFpWmFoIiwiYXVkIjoiWmFpWmFoIn0.KfeGnr-Cj5otMqDj41-eeb9GR4MmwxTAy7zlaGoTjRvHTHPZ7ZinJ-Z9hAAhSCDuwtrtZlXcJ7Od504skDMlqMe6exnG6QLBmvDXvr_iq02pC4UHCTgjYXT3HYb5uH7zuRdRY4tvNt0CiiXfU3mH0E31VuARHZCq3KYrPi-8CoyUr3yMTxd3jCG9FdoYx843z6yBTYZWajNs7rDKxSM2e6WAQ2FHobGkI5cTnmpVkSIEXNg2MRbxMwCMRDtg6xDJs92XXSNMXv2eHtychWrOq8eF4FXTT5fJrZxwKD0e_R_MGaeXr_2jMdNQsXqoTQCZiS5d4sjz4yyHtkb2bJtRIg\"\n}"
+						}
+					]
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "http://localhost:51811/api/product/",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:51811/api/product/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "51811",
+							"path": [
+								"api",
+								"product",
+								""
+							]
+						},
+						"description": "get All the product"
+					},
+					"response": [
+						{
+							"name": "http://localhost:51811/api/product/",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:51811/api/product/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "51811",
+									"path": [
+										"api",
+										"product",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/plain; charset=utf-8"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Server",
+									"value": "Microsoft-IIS/10.0"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "ASP.NET"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 27 Nov 2020 13:26:43 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "[{\"id\":\"5fb3c4316f772473f2789bc2\",\"name\":\"lipstic\",\"description\":\"sample product now it get updated\",\"price\":34.3,\"imageUrl\":[\"https://ae01.alicdn.com/kf/HTB1KLp8LHvpK1RjSZPiq6zmwXXa3/Brand-12-Color-Lipstick-Matte-Waterproof-Velvet-Lip-Stick-Nude-Sexy-Pumpkin-Color-Lipstick-Moisturizing-Makeup.jpg\"],\"rating\":4,\"color\":[\"Red\",\"Brown\"],\"category\":\"lip\",\"type\":\"lipstick\",\"status\":\"NEW\"},{\"id\":\"5fb3e9e03468c0870f07351c\",\"name\":\"lipstic\",\"description\":\"This is another product you will like this.\",\"price\":34.3,\"imageUrl\":[\"https://images-na.ssl-images-amazon.com/images/I/713suziL2DL._SL1500_.jpg\"],\"rating\":3,\"color\":[\"Red\",\"Green\",\"Brown\"],\"category\":\"EyeBrow\",\"type\":\"Boarder\",\"status\":\"UPDATED\"},{\"id\":\"5fb3ea263468c0870f07351d\",\"name\":\"lipstic\",\"description\":\"This is natural. use it cool.\",\"price\":1200.0,\"imageUrl\":[\"https://images-na.ssl-images-amazon.com/images/I/61OkVZcV5LL._SL1200_.jpg\"],\"rating\":5,\"color\":[\"Brown\"],\"category\":\"EyeBrow\",\"type\":\"Boarder\",\"status\":\"NEW\"},{\"id\":\"5fb3ea7e3468c0870f07351e\",\"name\":\"lipstic\",\"description\":\"It is useful. Here tax are freee\",\"price\":1800.0,\"imageUrl\":[\"https://5.imimg.com/data5/JE/LN/WI/SELLER-41868082/mars-imported-matte-35670b-a-12pcs-lipstick-multicolor-3-5-gm-500x500.jpg\",\"https://images-na.ssl-images-amazon.com/images/I/61OkVZcV5LL._SL1200_.jpg\"],\"rating\":3,\"color\":[\"Red\"],\"category\":\"lip\",\"type\":\"Boarder\",\"status\":\"UPDATED\"},{\"id\":\"5fb3eaa63468c0870f07351f\",\"name\":\"lipstic\",\"description\":\"It is useful. Here tax are freee\",\"price\":5000.0,\"imageUrl\":[\"https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/hbz-spring-lipstick-index-1554407344.jpg?crop=0.501xw:1.00xh;0.251xw,0&resize=640:*\"],\"rating\":5,\"color\":[\"Brown\"],\"category\":\"Hair\",\"type\":\"Hairdie\",\"status\":\"NEW\"}]"
+						}
+					]
+				}
+			],
+			"description": "This is for the product section",
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Cart",
+			"item": [
+				{
+					"name": "http://localhost:51811/api/cart/",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNyc2Etc2hhMjU2Iiwia2lkIjoiRkIxQUJGREYwNjE2RTIwMURDRUM3ODgwRkYxNEI0REQzQ0RBQjhDQSIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoicGFua2FqYW4wNUBnbWFpbC5jb20iLCJleHAiOjE2MDY1NzU4MjksImlzcyI6IlphaVphaCIsImF1ZCI6IlphaVphaCJ9.cj05BW55OzJUgMBgyJbLqb9VDYUL3RYBV_bPafh4feJW9o6Gvm5tDvSX_NvNu8oE2lhTgChzNDGZMKKg1dKAKeLpdKeUba4YnZOtDoDnzuTQqWPH8sqQNQRZu8eU6U2dZI3UAZorwT0WqqIBYuyS1DN1MPKZV_KPWmC4TT7eq_wYa005B-37caLtCPpvoUCrF6xQ5prFsEy9k38LuYXt_5DsC4uWLzxdG1Wqb7lv1FbTtvLfc_g-sOvZlFe-VuZY9QT9Ahc-cXX-NCMSS5REO12dQhYuHqyWHWCyNqexqrDHds_v-Yd2TeXnPJXLRKmmwD6q_0mjxCwxo1rEbYVH6A",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n        \"id\": \"5fb3c4316f772473f2789bc2\",\r\n        \"name\": \"lipstic\",\r\n        \"description\": \"sample product now it get updated\",\r\n        \"price\": 34.3,\r\n        \"imageUrl\": [\r\n            \"https://ae01.alicdn.com/kf/HTB1KLp8LHvpK1RjSZPiq6zmwXXa3/Brand-12-Color-Lipstick-Matte-Waterproof-Velvet-Lip-Stick-Nude-Sexy-Pumpkin-Color-Lipstick-Moisturizing-Makeup.jpg\"\r\n        ],\r\n        \"rating\": 4,\r\n        \"color\": [\r\n            \"Red\",\r\n            \"Brown\"\r\n        ],\r\n        \"category\": \"lip\",\r\n        \"type\": \"lipstick\",\r\n        \"status\": \"NEW\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:51811/api/cart/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "51811",
+							"path": [
+								"api",
+								"cart",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "This is for the cart of the ZaiZah",
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "WishList",
+			"item": [
+				{
+					"name": "http://localhost:51811/api/Wishlist",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNyc2Etc2hhMjU2Iiwia2lkIjoiRkIxQUJGREYwNjE2RTIwMURDRUM3ODgwRkYxNEI0REQzQ0RBQjhDQSIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoicGFua2FqYW4wNUBnbWFpbC5jb20iLCJleHAiOjE2MDY2NDg4NTgsImlzcyI6IlphaVphaCIsImF1ZCI6IlphaVphaCJ9.BysIq6PA8vn6pgpJAKZZLFY7BUmjWRozYpU_Bkz0XNoSBlVnWv4cufQm2pnLB4JaN5fw_nSUd8vza0Eb2v-c5WH--52Dg0xFA_yHbRp_9Ndk4pfyj85SR5uDsI4utcz9IpdcIY7FbvCisZWRUoQH_PON0I6fjm1I0-KNyYmUMPlW1LtgnA_yIEkxfiarVQ4xHEdDPntfBCSsjYwW8hCChoUGroDu3RgJrHjhGH1IB6StpqRUXRneCVsaaxZroeMgPQd7B4YXPzZcPHWUH99XtRFAsyozRo5xZv0qCzZSKnZN7Lmq4fN7qRKeMSxnGkZIuetPkxWzUl9NsNHJcHF10w",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:51811/api/Wishlist",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "51811",
+							"path": [
+								"api",
+								"Wishlist"
+							]
+						},
+						"description": "Get All the user's Wishlist"
+					},
+					"response": [
+						{
+							"name": "http://localhost:51811/api/Wishlist",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:51811/api/Wishlist",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "51811",
+									"path": [
+										"api",
+										"Wishlist"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/plain; charset=utf-8"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Server",
+									"value": "Microsoft-IIS/10.0"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "ASP.NET"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 28 Nov 2020 11:35:25 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "[{\"Name\":\"My_Favourite\",\"list\":[{\"id\":\"5fb3eaa63468c0870f07351f\",\"name\":\"lipstic\",\"description\":\"It is useful. Here tax are freee\",\"price\":5000.0,\"imageUrl\":[\"https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/hbz-spring-lipstick-index-1554407344.jpg?crop=0.501xw:1.00xh;0.251xw,0&resize=640:*\"],\"rating\":5,\"color\":[\"Brown\"],\"category\":\"Hair\",\"type\":\"Hairdie\",\"status\":\"NEW\"}]}]"
+						}
+					]
+				},
+				{
+					"name": "http://localhost:51811/api/Wishlist/My_Favourite/5fb3eaa63468c0870f07351f",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNyc2Etc2hhMjU2Iiwia2lkIjoiRkIxQUJGREYwNjE2RTIwMURDRUM3ODgwRkYxNEI0REQzQ0RBQjhDQSIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoicGFua2FqYW4wNUBnbWFpbC5jb20iLCJleHAiOjE2MDY2NDg4NTgsImlzcyI6IlphaVphaCIsImF1ZCI6IlphaVphaCJ9.BysIq6PA8vn6pgpJAKZZLFY7BUmjWRozYpU_Bkz0XNoSBlVnWv4cufQm2pnLB4JaN5fw_nSUd8vza0Eb2v-c5WH--52Dg0xFA_yHbRp_9Ndk4pfyj85SR5uDsI4utcz9IpdcIY7FbvCisZWRUoQH_PON0I6fjm1I0-KNyYmUMPlW1LtgnA_yIEkxfiarVQ4xHEdDPntfBCSsjYwW8hCChoUGroDu3RgJrHjhGH1IB6StpqRUXRneCVsaaxZroeMgPQd7B4YXPzZcPHWUH99XtRFAsyozRo5xZv0qCzZSKnZN7Lmq4fN7qRKeMSxnGkZIuetPkxWzUl9NsNHJcHF10w",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:51811/api/Wishlist/My_Favourite/5fb3eaa63468c0870f07351f",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "51811",
+							"path": [
+								"api",
+								"Wishlist",
+								"My_Favourite",
+								"5fb3eaa63468c0870f07351f"
+							]
+						},
+						"description": "Add a product to a Wishlist"
+					},
+					"response": [
+						{
+							"name": "http://localhost:51811/api/Wishlist/My_Favourite/5fb3eaa63468c0870f07351f",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:51811/api/Wishlist/My_Favourite/5fb3eaa63468c0870f07351f",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "51811",
+									"path": [
+										"api",
+										"Wishlist",
+										"My_Favourite",
+										"5fb3eaa63468c0870f07351f"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Server",
+									"value": "Microsoft-IIS/10.0"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "ASP.NET"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 28 Nov 2020 11:35:20 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Successfully added\"\n}"
+						}
+					]
+				},
+				{
+					"name": "http://localhost:51811/api/Wishlist/",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNyc2Etc2hhMjU2Iiwia2lkIjoiRkIxQUJGREYwNjE2RTIwMURDRUM3ODgwRkYxNEI0REQzQ0RBQjhDQSIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiS3VtYXIxQGdtYWlsLmNvbSIsImV4cCI6MTYwNjk4OTM3MywiaXNzIjoiWmFpWmFoIiwiYXVkIjoiWmFpWmFoIn0.iahPbP2uKOEmh2kjX9rQABLhfl1PA8Bf5NWC1WTVXHtidweWkgu_jdO9RGcgyQ4QBKqdIKgjvWN1xnHRuSRZG8uFROfyPRs0dvKzI3TEci0rqN3SOG2_Nrlhhp980wW9Wenq-22R9fVeG0aB-hUaLvmj_K-rcwsCU-PW6rxsoaeyqg3giQIAqBsfEl9HCVba-h_mR3RJEaPCzqIQWVrpSFFU2kAVClKf19u54IhR-_yy7JcVItKPhDfAEYvGAB2n0WJbDXDX0WAa4_pibEVdzaRa8k8_Ob6i_hKeG8QBdRN2tzlf6OBVNeXPyzwbNUdL0hYUNvfEhP_bsV-pHn14TQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"name\":\"Old_One\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:51811/api/Wishlist/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "51811",
+							"path": [
+								"api",
+								"Wishlist",
+								""
+							]
+						},
+						"description": "Create a wishList"
+					},
+					"response": [
+						{
+							"name": "http://localhost:51811/api/Wishlist/",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "\"Old_One\"",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:51811/api/Wishlist/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "51811",
+									"path": [
+										"api",
+										"Wishlist",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Server",
+									"value": "Microsoft-IIS/10.0"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "ASP.NET"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 28 Nov 2020 11:38:29 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Successfully created\"\n}"
+						}
+					]
+				},
+				{
+					"name": "http://localhost:51811/api/Wishlist/My_Favourite/5fb3eaa63468c0870f07351f",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNyc2Etc2hhMjU2Iiwia2lkIjoiRkIxQUJGREYwNjE2RTIwMURDRUM3ODgwRkYxNEI0REQzQ0RBQjhDQSIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoicGFua2FqYW4wNUBnbWFpbC5jb20iLCJleHAiOjE2MDY2NDg4NTgsImlzcyI6IlphaVphaCIsImF1ZCI6IlphaVphaCJ9.BysIq6PA8vn6pgpJAKZZLFY7BUmjWRozYpU_Bkz0XNoSBlVnWv4cufQm2pnLB4JaN5fw_nSUd8vza0Eb2v-c5WH--52Dg0xFA_yHbRp_9Ndk4pfyj85SR5uDsI4utcz9IpdcIY7FbvCisZWRUoQH_PON0I6fjm1I0-KNyYmUMPlW1LtgnA_yIEkxfiarVQ4xHEdDPntfBCSsjYwW8hCChoUGroDu3RgJrHjhGH1IB6StpqRUXRneCVsaaxZroeMgPQd7B4YXPzZcPHWUH99XtRFAsyozRo5xZv0qCzZSKnZN7Lmq4fN7qRKeMSxnGkZIuetPkxWzUl9NsNHJcHF10w",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:51811/api/Wishlist/My_Favourite/5fb3eaa63468c0870f07351f",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "51811",
+							"path": [
+								"api",
+								"Wishlist",
+								"My_Favourite",
+								"5fb3eaa63468c0870f07351f"
+							]
+						},
+						"description": "Delete a product from the wishlist"
+					},
+					"response": [
+						{
+							"name": "http://localhost:51811/api/Wishlist/My_Favourite/5fb3eaa63468c0870f07351f",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:51811/api/Wishlist/My_Favourite/5fb3eaa63468c0870f07351f",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "51811",
+									"path": [
+										"api",
+										"Wishlist",
+										"My_Favourite",
+										"5fb3eaa63468c0870f07351f"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Server",
+									"value": "Microsoft-IIS/10.0"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "ASP.NET"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 28 Nov 2020 11:39:37 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Successfully delete\"\n}"
+						}
+					]
+				},
+				{
+					"name": "http://localhost:51811/api/Wishlist/My_Favourite/",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNyc2Etc2hhMjU2Iiwia2lkIjoiRkIxQUJGREYwNjE2RTIwMURDRUM3ODgwRkYxNEI0REQzQ0RBQjhDQSIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoicGFua2FqYW4wNUBnbWFpbC5jb20iLCJleHAiOjE2MDY2NDg4NTgsImlzcyI6IlphaVphaCIsImF1ZCI6IlphaVphaCJ9.BysIq6PA8vn6pgpJAKZZLFY7BUmjWRozYpU_Bkz0XNoSBlVnWv4cufQm2pnLB4JaN5fw_nSUd8vza0Eb2v-c5WH--52Dg0xFA_yHbRp_9Ndk4pfyj85SR5uDsI4utcz9IpdcIY7FbvCisZWRUoQH_PON0I6fjm1I0-KNyYmUMPlW1LtgnA_yIEkxfiarVQ4xHEdDPntfBCSsjYwW8hCChoUGroDu3RgJrHjhGH1IB6StpqRUXRneCVsaaxZroeMgPQd7B4YXPzZcPHWUH99XtRFAsyozRo5xZv0qCzZSKnZN7Lmq4fN7qRKeMSxnGkZIuetPkxWzUl9NsNHJcHF10w",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:51811/api/Wishlist/My_Favourite/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "51811",
+							"path": [
+								"api",
+								"Wishlist",
+								"My_Favourite",
+								""
+							]
+						},
+						"description": "Delete a wishlist"
+					},
+					"response": [
+						{
+							"name": "http://localhost:51811/api/Wishlist/My_Favourite/",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:51811/api/Wishlist/My_Favourite/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "51811",
+									"path": [
+										"api",
+										"Wishlist",
+										"My_Favourite",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Server",
+									"value": "Microsoft-IIS/10.0"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "ASP.NET"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 28 Nov 2020 11:40:30 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Successfully delete\"\n}"
+						}
+					]
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
